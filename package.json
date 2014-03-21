@@ -1,11 +1,48 @@
 {
-	"name" : "exif-parser",
-	"version" : "0.1.5",
-	"description" : "A javascript library to extract Exif metadata from images, in node and in the browser.",
-	"author" : "Bruno Windels <bruno.windels@gmail.com>",
-    "keywords" : ["exif", "image", "jpeg", "jpg", "tiff", "gps"],
+	"name" : "metadata-parser",
+	"version" : "0.1.0",
+	"description" : "A javascript library to extract metadata from images for both Node and the browser.",
+  "homepage": "https://github.com/voidberg/metadata-parser",
+  "author": {
+    "name": "Alexandru Badiu",
+    "email": "andu@ctrlz.ro",
+    "url": "http://ctrlz.ro"
+  },
+  "keywords" : [
+    "exif",
+    "image",
+    "jpeg",
+    "jpg",
+    "tiff",
+    "gps",
+    "iptc",
+    "xmp"
+  ],
 	"repository" : {
 		"type" : "git",
-		"url" : "http://github.com/bwindels/exif-parser.git"
-	}
+		"url" : "http://github.com/voidberg/exif-parser.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-connect": "~0.5.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "grunt-contrib-watch": "~0.4.0",
+    "grunt": "~0.4.1",
+    "grunt-browserify": "~1.0.0",
+    "jasmine-node": "~1.7.0",
+    "grunt-contrib-jasmine": "~0.4.2",
+    "grunt-cli": "~0.1.8",
+    "grunt-jasmine-node": "~0.1",
+    "xmlshim": "~0.0.9"
+  },
+  "main": "src",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.github.com/voidberg/exif-parser/master/LICENSE.md"
+    }
+  ]
 }

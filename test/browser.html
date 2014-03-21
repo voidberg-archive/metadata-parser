@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../dist/metadata-parser.js"></script>
+    <script>
+      var parser = require('metadata-parser');
+
+      var getFilePart = function(file) {
+          if (file.slice) {
+              filePart = file.slice(0, 131072);
+          } else if (file.webkitSlice) {
+              filePart = file.webkitSlice(0, 131072);
+          } else if (file.mozSlice) {
+              filePart = file.mozSlice(0, 131072);
+          } else {
+              filePart = file;
+          }
+
+          return filePart;
+      };
+
+      $(document).ready(function () {
+        $('#select-files-input').change(function(e) {
+          var files = e.target.files;
+          for (var i = 0; i < files.length; i++) {
+            var reader = new FileReader();
+
+            reader.onload = function(event) {
+              var content = event.target.result;
+              var p = parser.create(content);
+
+              console.log(p.parse());
+            };
+
+            reader.readAsArrayBuffer(getFilePart(files[i]));
+          }
+
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input id="select-files-input" type="file" multiple="true" value="Choose file(s)" />
+  </body>
+</html>
