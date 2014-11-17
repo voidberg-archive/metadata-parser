@@ -1,0 +1,28 @@
+{
+	"name" : "metadata-parser",
+	"version" : "0.1.0",
+	"description" : "A javascript library to extract metadata from images for both Node and the browser.",
+  "homepage": "https://stash.corbis.com/projects/CMP/repos/metadata-parser/browse",
+  "authors": [
+    "Alexandru Badiu <andu@ctrlz.ro>"
+  ],
+  "main": "dist/metadata-parser.js",
+  "keywords" : [
+    "exif",
+    "image",
+    "jpeg",
+    "jpg",
+    "tiff",
+    "gps",
+    "iptc",
+    "xmp"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
