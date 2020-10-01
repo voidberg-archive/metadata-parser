@@ -1,3 +1,5 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 metadata-extract
 ========
 metadata-extract is a library that allows the extraction of metadata from image files. It supports EXIF, IPTC and a subset of XMP. It is written in pure javascript and has no external dependencies. It works for both Node.js and the browser via Browserify.
